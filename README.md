@@ -4,7 +4,7 @@ En esta ocasión aprenderemos cómo analizar un archivo PCAP en Wireshark con fi
 
 ---
 
-## Licencia
+Licencia
 
 Copyright © 2026 Razezape. All Rights Reserved.
 
