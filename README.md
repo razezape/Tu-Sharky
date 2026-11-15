@@ -18,7 +18,7 @@ Primero, utilizamos **Suricata** para identificar posibles actividades maliciosa
 
 ![](images/image6.png)
 
-Seguidamente, corremos el comando con la ruta del archivo **suricata.yaml**, que contiene la configuración principal de interfaz de red y reglas de detección de Suricata, como un snort.conf en snort.
+Seguidamente, corremos el comando con la ruta del archivo **suricata.yaml**, que contiene la configuración principal de interfaz de red y reglas de detección de Suricata, como el snort.conf en snort.
 
 ![](images/image9.png)
 
