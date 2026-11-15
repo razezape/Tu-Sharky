@@ -32,13 +32,13 @@ Veremos que se generaron varios archivos, pero nos enfocaremos en **fast.log.** 
 
 - **Priority 1:** La primera alerta indica que se detectó tráfico sospechoso proveniente de la IP 184.168.137.180, asociado al uso de un Exploit Kit *(EK)*, dirigido al host potencialmente infectado 172.16.174.93. La comunicación se realizó a través del puerto 80 *(HTTP)* del origen y el puerto temporal 49238 del host infectado, utilizado para recibir el tráfico.
 
-**Priority 1:** La segunda alerta indica una posible inyección de una librería JavaScript maliciosa desde el mismo host externo hacia nuestro host interno, clasificada como un Network Trojan. Suricata detecta esta actividad maliciosa, inspeccionando el contenido HTTP y comparando patrones sospechosos con sus reglas de detección.
+- **Priority 1:** La segunda alerta indica una posible inyección de una librería JavaScript maliciosa desde el mismo host externo hacia nuestro host interno, clasificada como un Network Trojan. Suricata detecta esta actividad maliciosa, inspeccionando el contenido HTTP y comparando patrones sospechosos con sus reglas de detección.
 
-**Priority 1:** La tercera alerta indica que Suricata detectó una versión desactualizada de Adobe Flash comunicándose desde nuestro host sospechoso hacia la IP externa. Esto representa un posible riesgo de seguridad, ya que las versiones antiguas de Flash pueden contener vulnerabilidades que los atacantes podrían explotar para ejecutar código malicioso.
+- **Priority 1:** La tercera alerta indica que Suricata detectó una versión desactualizada de Adobe Flash comunicándose desde nuestro host sospechoso hacia la IP externa. Esto representa un posible riesgo de seguridad, ya que las versiones antiguas de Flash pueden contener vulnerabilidades que los atacantes podrían explotar para ejecutar código malicioso.
 
 ![](images/image17.png)
 
-**Priority 2:** Suricata detectó una consulta DNS saliente desde nuestro host sospechoso 172.16.174.93:58689 hacia el dominio onion.to, enviando la solicitud al gateway/router/switch 172.16.174.1:53 mediante UDP.
+- **Priority 2:** Suricata detectó una consulta DNS saliente desde nuestro host sospechoso 172.16.174.93:58689 hacia el dominio onion.to, enviando la solicitud al gateway/router/switch 172.16.174.1:53 mediante UDP.
 
 Recordemos que DNS se encarga de traducir nombres de dominio a direcciones IP y que UDP permite realizar estas consultas rápidamente sin necesidad de establecer previamente una conexión. En este caso, resulta interesante que el dominio consultado esté relacionado con un servicio proxy de Tor, lo que resulta especialmente sospechoso, ya que onion.to está relacionado con servicios proxy de Tor, una red que permite ocultar la identidad y el origen del tráfico. Esto podría sugerir que el equipo comprometido intentaba establecer comunicaciones de forma anónima, posiblemente para ocultar actividad maliciosa.
 
@@ -46,11 +46,11 @@ Recordemos que DNS se encarga de traducir nombres de dominio a direcciones IP y 
 
 ![](images/image27.png)
 
-**Priority 3:** La alerta hace referencia a un JA3 Hash, es decir, una huella digital *(fingerprint)* generada mediante el análisis de las características de una conexión TLS. Esta huella se obtiene mediante un hash MD5 y permite identificar y comparar patrones de conexión, de forma similar a cuando extraemos el hash de un archivo para compararlo con bases de datos de malware.
+- **Priority 3:** La alerta hace referencia a un JA3 Hash, es decir, una huella digital *(fingerprint)* generada mediante el análisis de las características de una conexión TLS. Esta huella se obtiene mediante un hash MD5 y permite identificar y comparar patrones de conexión, de forma similar a cuando extraemos el hash de un archivo para compararlo con bases de datos de malware.
 
 Es importante entender que los fingerprints TLS *(JA3)* permiten identificar cómo un cliente inicia una conexión TLS, mientras que los TLS certificates ayudan a verificar la identidad del servidor.
 
-- En este caso, los fingerprints JA3 detectados coinciden con patrones asociados a Malspam *(spam utilizado para distribuir malware)* y RigEK *(explotación de vulnerabilidades)*, lo que podría indicar comunicaciones relacionadas con actividades maliciosas.
+En este caso, los fingerprints JA3 detectados coinciden con patrones asociados a Malspam *(spam utilizado para distribuir malware)* y RigEK *(explotación de vulnerabilidades)*, lo que podría indicar comunicaciones relacionadas con actividades maliciosas.
 
 Relacionadas con múltiples conexiones HTTPS salientes desde nuestro host sospechoso 172.16.174.93 hacia diferentes direcciones IP externas, utilizando distintos puertos temporales asignados dinámicamente, lo que podría indicar que el equipo está comunicándose con servidores externos utilizados para distribuir malware o ejecutar actividades maliciosas.
 
