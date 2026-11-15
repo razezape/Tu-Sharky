@@ -1,6 +1,14 @@
 # Análisis de PCAP: Host infectado con malware
 
-En esta ocasión aprenderemos cómo analizar un archivo PCAP en el que se sospecha que la computadora de uno de los empleados ha sido infectada con algún tipo de malware después de haber visitado una página web infectada, ya que, a primera vista se ven conexiones extrañas. Con fines educativos.
+En esta ocasión aprenderemos cómo analizar un archivo PCAP en Wireshark con filtros y tecnicas basica pero eficases. Se sospecha que la computadora de uno de los empleados ha sido infectada, dentro de la red de la compañia, con algún tipo de malware cuyo se origino después de haber visitado una página web infectada. A primera vista se ven conexiones extrañas. 
+
+---
+
+## Licencia
+
+Copyright © 2026 Razezape. All Rights Reserved.
+
+Este documento y su contenido se comparten con fines educativos. Queda prohibida su reproducción, distribución o modificación, total o parcial, sin autorización previa y por escrito del autor.
 
 ---
 
