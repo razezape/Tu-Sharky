@@ -14,9 +14,7 @@ Este documento y su contenido se comparten con fines educativos. Queda prohibida
 
 ## Tarea 1: Identificar las características del host infectado
 
-Primero, utilizamos **Suricata** para identificar posibles actividades maliciosas, hosts afectados y destinos sospechosos en nuestro dump file de manera automatizada.
-
-Este tool genera alertas mediante reglas de detección, que pueden ser las incluidas por defecto o reglas adicionales que podemos descargar e incorporar. Aquí creamos primero una **carpeta**, donde se almacenarán nuestras alertas.
+Primero, utilizamos **Suricata** para identificar posibles actividades maliciosas, hosts afectados y destinos sospechosos en nuestro dump file de manera automatizada. Este tool genera alertas mediante reglas de detección, que pueden ser las incluidas por defecto o reglas adicionales que podemos descargar e incorporar. Aquí creamos primero una **carpeta**, donde se almacenarán nuestras alertas.
 
 ![](images/image6.png)
 
