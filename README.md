@@ -14,8 +14,6 @@ En esta ocasión, utilicé un archivo PCAP de ejemplo *(not included)* para real
   </a>
 </p>
 
----
-
 License
 
 Copyright © 2026 Razezape. All Rights Reserved.
@@ -25,8 +23,6 @@ This repository and its contents, including but not limited to text, images, ana
 No part of this work may be copied, reproduced, distributed, modified, or used for commercial purposes, in whole or in part, without the prior written permission of the author.
 
 Unauthorized use of this material is strictly prohibited.
-
----
 
 ## Tarea 1: Identificar las características del host infectado
 
@@ -92,8 +88,6 @@ Una vez generadas las alertas, decidí utilizar otra herramienta: NetworkMiner, 
 - **HostName:** BROCK-PC
 - **Mac Address:** 5C-26-0A-83-B1-D5
 - **Operating System:** Windows Vista
-
----
 
 ## 2. ¿Cuál es el IP address y la URL del sitio web comprometido que visitó el usuario y que desencadenó el tráfico malicioso *(antes de que este se produjera)*?
 
@@ -211,8 +205,6 @@ Por lo tanto, la actividad sospechosa comenzó después de la solicitud a Google
 - **IP address** *(**before** malware traffic happened)*: 184.168.137.1
 - **URL address** *(**before** malware traffic happened)*: hongkonghotels.org
 
----
-
 ## 3. ¿Cuál es la dirección IP y el nombre de dominio desde los que se distribuyó el malware?
 
 Parece que el archivo malicioso se originó en el sitio web **tilisinga-ismaeliet.starlightsteps.org.** Después de que Brock visitará este sitio, el servidor entregó código HTML que contenía un objeto Flash incrustado, el cual hacía referencia a una versión desactualizada de Flash Player.
@@ -279,11 +271,8 @@ A partir de ese punto, comencé a listar otros posibles hosts maliciosos de cada
 ### Answers
 Al parecer, inicialmente pasé por alto dos hosts relacionados con actividad de **ransomware**, el host con la IP **85.14.243.9:** *Ransomware Callback Server*, fue usado aparentemente por el malware para comunicarse con sus operadores y otro host con la IP **217.197.83.197:** *Ransomware Payment Server*, que estaba alojado en la red Tor (`.onion`), por la cual permite a los atacantes mantener la página de pago del rescate de forma anónima y dificulta ubicarlos.
 
-
-<div align="center">
-
 | Campo | Valor |
-|:-----:|:-----:|
+|-----|-----|
 | **Hostname/URL** | Hong Kong Hotels |
 | **IP Address** | 184.168.137.1 |
 | **Role** | Even though their .js seems to be okay, somehow it is still a EKs and JS Injection compromised website. |
@@ -291,7 +280,7 @@ Al parecer, inicialmente pasé por alto dos hosts relacionados con actividad de 
 | **Date and time of the interactions** | BROCK → WEBSITE *(20:21:36)* to END *(20:21:43)* in 2016 |
 
 | Campo | Valor |
-|:-----:|:-----:|
+|-----|-----|
 | **Hostname/URL** | BROK'S GATEWAY ROUTER |
 | **IP Address** | 172.16.174.1 |
 | **Role** | Brock's default gateway, responsible for access to internet, traffic related to [onion.to](http://onion.to), a Tor proxy service used to anonymize and encrypt internet traffic |
@@ -299,7 +288,7 @@ Al parecer, inicialmente pasé por alto dos hosts relacionados con actividad de 
 | **Date and time of the interactions** | ROUTER → BROCK PC *(20:22:35)* in 2016 |
 
 | Campo | Valor |
-|:-----:|:-----:|
+|-----|-----|
 | **Hostname/URL** | ONION.TO |
 | **IP Address** | 217.197.83.197 |
 | **Role** | The external server 217.197.83.197 communicated with Brock's infected PC. An HTTP object associated with an .onion.to hostname was identified, potentially indicating an attempt to access a Tor-related service. |
@@ -333,8 +322,6 @@ No estoy completamente seguro de cómo llegó hasta allí, pero una posibilidad 
 Después de la infección, el equipo estableció una conexión con el **Ransomware Callback Server** *(85.14.243.9)*, utilizado para comunicarse con los operadores del ransomware. Posteriormente, se establecieron conexiones con el Ransomware Payment Server *(217.197.83.197)*, alojado en la red Tor mediante un servicio .onion, posiblemente utilizado para gestionar el pago del rescate de forma anónima.
 
 Finalmente, el tráfico también muestra comunicaciones a través de un proxy Tor *(onion.to)*, lo que podría estar relacionado con las comunicaciones cifradas del malware y la posible exfiltración de información.
-
----
 
 ## 7. Medidas de mitigación y posibles soluciones de remediación
 
