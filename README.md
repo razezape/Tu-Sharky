@@ -190,8 +190,8 @@ Revisé algunos de los archivos y, noté que el GIF recibido tenía una valoraci
 Aunque el análisis de la comunidad de VirusTotal había señalado un GIF como potencialmente malicioso, esto no basta para concluir que sea malware, por lo que lo tomé solo como un indicador a investigar. Y justo apartir de aqui, vemos que **Brock** estableció una conexión con **hongkonghotels.org**, que resolvía a la dirección IP 184.168.137.1 en el network packet # 2221.
 
 <p align="center">
-  <img src="images/image18.png" width="900">
-  <img src="images/image23.png" width="900">
+  <img src="images/image18.png" width="700">
+  <img src="images/image23.png" width="700">
 </p>
 
 Al analizar los network packets del # 0 al 2173 con el filtro HTTP, no encontré tráfico claramente malicioso. La actividad parecía corresponder a una navegación normal, con solicitudes desde el equipo de **Brock** hacia diferentes servidores, relacionadas con búsquedas de alojamientos, destinos vacacionales, viajes por carretera y otra información turística. 
@@ -212,8 +212,8 @@ Por lo tanto, la actividad sospechosa comenzó después de la solicitud a Google
 Parece que el archivo malicioso se originó en el sitio web **tilisinga-ismaeliet.starlightsteps.org.** Después de que Brock visitará este sitio, el servidor entregó código HTML que contenía un objeto Flash incrustado, el cual hacía referencia a una versión desactualizada de Flash Player.
 
 <p align="center">
-  <img src="images/image33.png" width="700">
-  <img src="images/image14.png" width="700">
+  <img src="images/image33.png" width="700"><br>
+  <img src="images/image14.png" width="1000">
 </p>
 
 Algo interesante que se puede ver en el network packet # 2355 es que, al profundizar un poco más, aparece otra sección debajo del encabezado **Hypertext Transfer Protocol** llamada "Line-based text data", que contiene 37 líneas de código HTML...
@@ -240,7 +240,7 @@ Además, el payload *(carga maliciosa)* del malware puede realizar diferentes ac
 Varios proveedores de seguridad identificaron el archivo como malicioso, utilizando nombres de detección como *HTML.Exploit.Kit.Q*, *Trojan.Script.Wacatac.B!ml*, *JS.Neutrino.Susp.B* y *HTML/Neutrino.e*.
 
 <p align="center">
-  <img src="images/image20.png" width="700"><br>
+  <img src="images/image20.png" width="700">
   <img src="images/image1.png" width="700">
 </p>
 
