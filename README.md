@@ -1,7 +1,7 @@
 # Análisis de PCAP: Host infectado con malware
 
-En esta ocasión, utilizaremos un archivo PCAP de ejemplo para realizar un análisis con fines educativos. Se sospecha que la computadora de uno de los empleados de la compañía ha sido infectada con algún tipo de malware. Aparentemente, el empleado visitó una página web infectada. A primera vista, se observan algunas conexiones sospechosas que investigaremos a continuación.  
-  
+En esta ocasión, utilicé un archivo PCAP de ejemplo *(not included)* para realizar un **network packet analysis**. Se sospecha que la computadora de uno de los empleados de la compañía ha sido infectada con algún tipo de malware. Aparentemente, el empleado visitó una página web infectada. A primera vista, se observan algunas conexiones sospechosas que investigaremos a continuación. 
+
 <p align="center">
   <a>
     <img src="https://img.shields.io/badge/-Wireshark-S?style=for-the-badge&logo=wireshark&labelColor=%23000000&color=%230082FC" alt="Wireshark">
@@ -16,11 +16,15 @@ En esta ocasión, utilizaremos un archivo PCAP de ejemplo para realizar un anál
 
 ---
 
-Licencia
+License
 
 Copyright © 2026 Razezape. All Rights Reserved.
 
-Este documento y su contenido se comparten con fines educativos. Queda prohibida su reproducción, distribución o modificación, total o parcial, sin autorización previa y por escrito del autor.
+This repository and its contents, including but not limited to text, images, analysis, and documentation, are the exclusive intellectual property of the author and are provided for **educational and informational purposes only**.
+
+No part of this work may be copied, reproduced, distributed, modified, or used for commercial purposes, in whole or in part, without the prior written permission of the author.
+
+Unauthorized use of this material is strictly prohibited.
 
 ---
 
