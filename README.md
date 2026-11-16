@@ -1,6 +1,6 @@
 # Análisis de PCAP: Host infectado con malware
 
-En esta ocasión usaremos un archivo PCAP de ejemplo para analizar con fines educativos. Se sospecha que la computadora de uno de los empleados, dentro de la red de la compañia, ha sido infectada con algún tipo de malware. Aparentemente este empleado cuyo visito una página web infectada. A primera vista se ven conexiones extrañas, las investigaremos a continuación.  
+En esta ocasión, utilizaremos un archivo PCAP de ejemplo para realizar un análisis con fines educativos. Se sospecha que la computadora de uno de los empleados de la compañía ha sido infectada con algún tipo de malware. Aparentemente, el empleado visitó una página web infectada. A primera vista, se observan algunas conexiones sospechosas que investigaremos a continuación.  
   
 <p align="center">
   <a href="https://www.wireshark.org/" target="_blank">
