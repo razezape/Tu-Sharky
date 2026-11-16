@@ -127,7 +127,9 @@ Inicialmente pensé que Brock podría haber hecho clic en ella debido a la activ
 
 Revisé algunos de los archivos y, noté que el GIF recibido tenía una valoración negativa de la comunidad en VirusTotal_
 
-![](images/image12.png)
+<p align="center">
+  <img src="images/image12.png" width="300">
+</p>
 
 | Campo | Valor |
 |-------|-------|
@@ -136,7 +138,9 @@ Revisé algunos de los archivos y, noté que el GIF recibido tenía una valoraci
 | **SRC** | 54.225.202.140 |
 | **DST** | BROCK-PC |
 
-![](images/image21.png)
+<p align="left">
+  <img src="images/image21.png" width="300">
+</p>
 
 | Campo | Valor |
 |-------|-------|
