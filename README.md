@@ -277,6 +277,8 @@ A partir de ese punto, comencé a listar otros posibles hosts maliciosos de cada
 </p>
 
 ### Answers
+Al parecer, inicialmente pasé por alto dos hosts relacionados con actividad de **ransomware**, el host con la IP **85.14.243.9:** *Ransomware Callback Server*, fue usado aparentemente por el malware para comunicarse con sus operadores y otro host con la IP **217.197.83.197:** *Ransomware Payment Server*, que estaba alojado en la red Tor (`.onion`), por la cual permite a los atacantes mantener la página de pago del rescate de forma anónima y dificulta ubicarlos.
+
 
 <div align="center">
 
@@ -313,12 +315,6 @@ A partir de ese punto, comencé a listar otros posibles hosts maliciosos de cada
 | **Date and time of the interactions** | PROXY SERVICE → BROCK PC *(20:22:35)* to END *(20:22:52)* in 2016 |
 
 </div>
-
-Al parecer, inicialmente pasé por alto dos hosts relacionados con actividad de **ransomware**:
-
-- **85.14.243.9:** *Ransomware Callback Server*, usado por el malware para comunicarse con sus operadores.
-- **217.197.83.197:** *Ransomware Payment Server*, alojado en la red Tor (`.onion`), que permite a los atacantes mantener la página de pago del rescate de forma anónima y dificulta ubicarlos.
-
 ---
 
 ## 6. Graphic sketch and explain of the attack scenario
