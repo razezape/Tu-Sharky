@@ -152,7 +152,7 @@ Revisé algunos de los archivos y, noté que el GIF recibido tenía una valoraci
 | **SRC** | 54.225.202.140 |
 | **DST** | BROCK-PC |
 
-<img src="images/image21.png" width="300">
+<img src="images/image21.png" width="400">
 
 | Campo | Valor |
 |-------|-------|
