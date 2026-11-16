@@ -165,12 +165,16 @@ Revisé algunos de los archivos y, noté que el GIF recibido tenía una valoraci
   <img src="images/image12.png" width="500">
 </p>
 
+<div align="center">
+
 | Campo | Valor |
 |:-----:|:-----:|
 | **Network Packet #** | 1614 |
 | **Objects** | GIF |
 | **SRC** | 54.225.202.140 |
 | **DST** | BROCK-PC |
+
+</div>
 
 <p align="center">
   <img src="images/image21.png" width="400">
