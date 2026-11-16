@@ -26,6 +26,8 @@ No part of this work may be copied, reproduced, distributed, modified, or used f
 
 Unauthorized use of this material is strictly prohibited.
 
+---
+
 ## Tarea 1: Identificar las características del host infectado
 
 Primero, utilizamos **Suricata** para generar alertas mediante reglas de detección, offline/online, que pueden ser las incluidas por defecto o reglas adicionales que podemos descargar e incorporar. Aquí creamos primero una **carpeta**, donde se almacenarán nuestras alertas.
