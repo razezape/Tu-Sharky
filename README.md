@@ -292,14 +292,6 @@ Al parecer, inicialmente pasé por alto dos hosts relacionados con actividad de 
 
 | Campo | Valor |
 |:-----:|:-----:|
-| **Hostname/URL** | Starlight Steps Org UK |
-| **IP Address** | 5.135.252.130 |
-| **Role** | Delivered the malware in html markup language |
-| **Communication protocol or service** | HTTP, TCP |
-| **Date and time of the interactions** | WEBSITE → BROCK *(20:21:37)* to END *(20:22:49)* in 2016 |
-
-| Campo | Valor |
-|:-----:|:-----:|
 | **Hostname/URL** | BROK'S GATEWAY ROUTER |
 | **IP Address** | 172.16.174.1 |
 | **Role** | Brock's default gateway, responsible for access to internet, traffic related to [onion.to](http://onion.to), a Tor proxy service used to anonymize and encrypt internet traffic |
@@ -313,6 +305,14 @@ Al parecer, inicialmente pasé por alto dos hosts relacionados con actividad de 
 | **Role** | The external server 217.197.83.197 communicated with Brock's infected PC. An HTTP object associated with an .onion.to hostname was identified, potentially indicating an attempt to access a Tor-related service. |
 | **Communication protocol or service** | TCP, HTTP and TLSv1.2 |
 | **Date and time of the interactions** | PROXY SERVICE → BROCK PC *(20:22:35)* to END *(20:22:52)* in 2016 |
+
+| Campo | Valor |
+|:-----:|:-----:|
+| **Hostname/URL** | Starlight Steps Org UK |
+| **IP Address** | 5.135.252.130 |
+| **Role** | Delivered the malware in html markup language |
+| **Communication protocol or service** | HTTP, TCP |
+| **Date and time of the interactions** | WEBSITE → BROCK *(20:21:37)* to END *(20:22:49)* in 2016 |
 
 </div>
 ---
