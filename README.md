@@ -222,11 +222,7 @@ Algo interesante que se puede ver en el network packet # 2355 es que, al profund
   <img src="images/image4.png" width="700">
 </p>
 
-Una de las primeras líneas muestra **DOCTYPE HTML PUBLIC** y hace referencia a [www.w3.org](https://www.w3.org). Esto no indica malware, solo es el estándar web HTML 4.01 Transitional. 
-
-El resto del código es más interesante: contiene un objeto Flash incrustado que hace referencia a un archivo externo **SWF** y le indica al navegador que lo cargue. Aquí empieza lo sospechoso. **VirusTotal** identificó el SWF como malicioso, lo que coincide con la alerta de Suricata *Outdated Adobe Flash – Priority 1*.
-
-Este pudo ser el punto inicial de la infección en la computadora de Brock, y de ahí las conexiones posteriores a sitios como **hongkonghotels.org**, que también tiene alertas Priority 1 de **Exploit Kits (EKs)** e inyección de JavaScript malicioso.
+Una de las primeras líneas muestra **DOCTYPE HTML PUBLIC** y hace referencia a [www.w3.org](https://www.w3.org). Esto no indica malware, solo es el estándar web HTML 4.01 Transitional. El resto del código es más interesante: contiene un objeto Flash incrustado que hace referencia a un archivo externo **SWF** y le indica al navegador que lo cargue. Aquí empieza lo sospechoso. **VirusTotal** identificó el SWF como malicioso, lo que coincide con la alerta de Suricata *Outdated Adobe Flash – Priority 1*. Este pudo ser el punto inicial de la infección en la computadora de Brock, y de ahí las conexiones posteriores a sitios como **hongkonghotels.org**, que también tiene alertas Priority 1 de **Exploit Kits (EKs)** e inyección de JavaScript malicioso.
 
 ### Answers
 
