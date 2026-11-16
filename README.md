@@ -151,7 +151,7 @@ También noté que, al acceder a **AsiaTravel**, la página cargaba imágenes GI
 
 Según mi análisis, Brock estaba navegando por **Asia Travel**, un sitio web aparentemente seguro, cuando la página estableció una conexión con Kissmetrics, que respondió con una imagen GIF.
 
-Inicialmente pensé que Brock podría haber hecho clic en ella debido a la actividad de ida y vuelta *(round-trip)*. Esto posteriormente lo llevó a A.AdRoll, que respondió con un archivo JavaScript. A partir de ese momento, la IP 54.243.123.3 comenzó a aparecer en las alertas de Suricata con prioridad 3.
+Inicialmente pensé que Brock podría haber hecho clic en ella debido a la actividad de ida y vuelta *(round-trip)*. Esto posteriormente lo llevó a AdRoll, que respondió con un archivo JavaScript. A partir de ese momento, la IP 54.243.123.3 comenzó a aparecer en las alertas de Suricata con prioridad 3.
 
 <p align="center">
   <img src="images/image2.png" width="700">
@@ -184,7 +184,7 @@ Inicialmente pensé que Brock podría haber hecho clic en ella debido a la activ
 
 </div>
 
-Aunque el análisis de la comunidad de VirusTotal había señalado un GIF como potencialmente malicioso, esto no basta para concluir que sea malware, por lo que lo tomé solo como un indicador a investigar. Y justo apartir de aqui, vemos que **Brock** estableció una conexión con **hongkonghotels.org**, que resolvía a la dirección IP 184.168.137.1 en el network packet # 2221.
+Aunque el análisis del JavaScript y del GIF no arrojó resultados concluyentes, la comunidad de VirusTotal había señalado el GIF como potencialmente malicioso. Esto no basta para concluir que sea malware, por lo que lo tomé solo como un indicador a investigar. Y justo a partir de aquí, vemos que **Brock** estableció una conexión con **hongkonghotels.org**, que resolvía a la dirección IP 184.168.137.1 en el network packet # 2221.
 
 <p align="center">
   <img src="images/image18.png" width="1000">
