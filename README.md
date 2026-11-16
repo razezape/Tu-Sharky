@@ -188,9 +188,10 @@ Revisé algunos de los archivos y, noté que el GIF recibido tenía una valoraci
 </div>
 
 Aunque el análisis de la comunidad de VirusTotal había señalado un GIF como potencialmente malicioso, esto no basta para concluir que sea malware, por lo que lo tomé solo como un indicador a investigar. Y justo apartir de aqui, vemos que **Brock** estableció una conexión con **hongkonghotels.org**, que resolvía a la dirección IP 184.168.137.1 en el network packet # 2221.
+
 <p align="center">
-  <img src="images/image18.png" width="700">
-  <img src="images/image23.png" width="700">
+  <img src="images/image18.png" width="900">
+  <img src="images/image23.png" width="900">
 </p>
 
 Al analizar los network packets del # 0 al 2173 con el filtro HTTP, no encontré tráfico claramente malicioso. La actividad parecía corresponder a una navegación normal, con solicitudes desde el equipo de **Brock** hacia diferentes servidores, relacionadas con búsquedas de alojamientos, destinos vacacionales, viajes por carretera y otra información turística. 
