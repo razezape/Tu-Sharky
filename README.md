@@ -231,8 +231,6 @@ A partir de ese punto, comencé a listar otros posibles hosts maliciosos de cada
 | **Communication protocol or service** | HTTP, TCP |
 | **Date and time of the interactions** | BROCK → WEBSITE *(20:21:36)* to END *(20:21:43)* in 2016 |
 
-<br>
-
 | Campo | Valor |
 |-------|-------|
 | **Hostname/URL** | Starlight Steps Org UK |
@@ -240,8 +238,6 @@ A partir de ese punto, comencé a listar otros posibles hosts maliciosos de cada
 | **Role** | Delivered the malware in html markup language |
 | **Communication protocol or service** | HTTP, TCP |
 | **Date and time of the interactions** | WEBSITE → BROCK *(20:21:37)* to END *(20:22:49)* in 2016 |
-
-<br>
 
 | Campo | Valor |
 |-------|-------|
@@ -251,8 +247,6 @@ A partir de ese punto, comencé a listar otros posibles hosts maliciosos de cada
 | **Communication protocol or service** | DNS |
 | **Date and time of the interactions** | ROUTER → BROCK PC *(20:22:35)* in 2016 |
 
-<br>
-
 | Campo | Valor |
 |-------|-------|
 | **Hostname/URL** | ONION.TO |
@@ -260,6 +254,8 @@ A partir de ese punto, comencé a listar otros posibles hosts maliciosos de cada
 | **Role** | The external server 217.197.83.197 communicated with Brock's infected PC. An HTTP object associated with an .onion.to hostname was identified, potentially indicating an attempt to access a Tor-related service. |
 | **Communication protocol or service** | TCP, HTTP and TLSv1.2 |
 | **Date and time of the interactions** | PROXY SERVICE → BROCK PC *(20:22:35)* to END *(20:22:52)* in 2016 |
+
+<br>
 
 Al parecer, inicialmente pasé por alto dos hosts relacionados con actividad de **ransomware**:
 
