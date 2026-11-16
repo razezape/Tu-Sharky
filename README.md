@@ -56,11 +56,10 @@ Relacionadas con múltiples conexiones HTTPS salientes desde nuestro host sospec
 
 ![](images/image15.png)
 
-Una vez generadas las alertas, decidí utilizar otra herramienta: NetworkMiner, para visualizar nuestro pcap. file *(tráfico de red capturado)* de una forma más friendly.
+Una vez generadas las alertas, decidí utilizar otra herramienta: NetworkMiner, para visualizar nuestro pcap. file *(tráfico de red capturado)* de una forma más friendly. Filtrando los hosts por número de paquetes enviados *(# of sent packets)*. 
 
-Filtramos los hosts por número de paquetes enviados *(# of sent packets)*, identificando nuestro primer host sospechoso 172.16.174.93 *(BROCK-PC)*, con un total de 2,252 paquetes enviados.
-
-El segundo host de interés es la IP externa 217.197.83.197, señalada por Suricata *(Priority 3)* por posibles actividades de malware en spam, asociada con Tor2Web, un proxy para acceder a sitios ocultos de Tor.
+- Aqui identificamos nuestro primer host sospechoso 172.16.174.93 *(BROCK-PC)*, con un total de 2,252 paquetes enviados.
+- El segundo host de interés es la IP externa 217.197.83.197, señalada por Suricata *(Priority 3)* por posibles actividades de malware en spam, asociada con Tor2Web, un proxy para acceder a sitios ocultos de Tor.
 
 ### Respuestas
 
