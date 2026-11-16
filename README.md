@@ -180,12 +180,16 @@ Revisé algunos de los archivos y, noté que el GIF recibido tenía una valoraci
   <img src="images/image21.png" width="400">
 </p>
 
+<div align="center">
+
 | Campo | Valor |
-|-------|-------|
+|:-----:|:-----:|
 | **Network Packet #** | 1709 |
 | **Objects** | GIF |
 | **SRC** | 23.15.4.25 |
 | **DST** | BROCK-PC |
+
+</div>
 
 Aunque el análisis de la comunidad de VirusTotal había señalado un GIF como potencialmente malicioso, esto no basta para concluir que sea malware, por lo que lo tomé solo como un indicador a investigar. Y justo apartir de aqui, vemos que **Brock** estableció una conexión con **hongkonghotels.org**, que resolvía a la dirección IP 184.168.137.1 en el network packet # 2221.
 
