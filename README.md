@@ -76,12 +76,16 @@ Antes de pasar a Wireshark, decidí crear un pequeño resumen visual de todas la
 
 ![](images/image31.png)
 
-Procedemos a abrir el archivo PCAP en **Wireshark** y empezar a poner los filtros siguientes:
+Procedemos a abrir el archivo PCAP en **Wireshark**, y aqui algunos de los mejores metodos/filtros para empezar con tu analisis:
 
 - View **>** Time Display Format
 - Statistics **>** Protocol Hierarchy **>** Hypertext Transfer Protocol **>** Apply as Filter **>** Selected
-- _(click on any column name)_ **>** Column Preferences **>** "Drag, add or move new columns"
 - Files **>** Export Objects **>** HTTP _(para hash calculations)_
+
+También, podemos hacer lo siguientes:
+
+- Añadir cualquier columna partir de nuestro **Packet Details Panel** _(panel de detalles del paquete)_.
+- - _(click on any column name)_ **>** Column Preferences **>** "Drag, add or move new columns"
 
 ![](images/image7.png)
 
