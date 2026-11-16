@@ -91,7 +91,7 @@ Una vez generadas las alertas, decidí utilizar otra herramienta: NetworkMiner, 
 Antes de pasar a Wireshark, decidí crear un pequeño resumen visual de todas las alertas generadas por Suricata, organizándose por prioridad y destacando las direcciones IP más relevantes. Esto facilita la identificación del tráfico sospechoso y permite seguir un proceso de análisis más estructurado en Wireshark.
 
 <p align="center">
-  <img src="images/image31.png" width="300">
+  <img src="images/image31.png" width="400">
 </p>
 
 Procedemos a abrir el archivo PCAP en **Wireshark**, y aqui algunos de los mejores metodos/filtros para empezar con tu analisis:
@@ -106,7 +106,6 @@ También, podemos hacer lo siguientes:
 - _(click on any column name)_ **>** Column Preferences **>** "Drag, add or move new columns"
 
 ![](images/image7.png)
-
 ![](images/image11.png)
 
 De acuerdo a lo de arriba, podemos decir que el usuario visitó **msftncsi.com, microsoft.com** y posteriormente **Bing**. También vemos una solicitud a **api.bing.com**, que está procesando una consulta relacionada con el sitio web **Asia Travel** a través del buscador Bing. 
@@ -118,7 +117,6 @@ Luego, aparece un network packet HTTP/XML que contiene una respuesta de Bing con
 En la imagen de abajo, podemos ver algunos archivos **JavaScript** que están siendo enviados a **BROCK-PC.** Confío en que las alertas de Suricata son precisas, por lo que no pude encontrar esta dirección IP de **Asia Travel** entre las alertas generadas. Sin embargo, también exporté los objetos y comparé sus hashes para verificar su integridad.
 
 ![](images/image10.png)
-
 ![](images/image24.png)
 
 Hasta este punto, todo parece normal. Se observa tráfico relacionado con la carga de recursos del navegador, tal como aparecerían en la pantalla de **BROCK-PC**: animaciones, archivos **CSS**, scripts de **JavaScript** e imágenes de **AsiaTravel**. 
@@ -128,11 +126,8 @@ Hasta este punto, todo parece normal. Se observa tráfico relacionado con la car
 También noté que, al acceder a **AsiaTravel**, la página cargaba imágenes GIF durante la sesión de navegación de Brock. Además, **AsiaTravel** establecía conexiones con varios servidores de terceros. Esto sugiere que el sitio web cargaba recursos externos y utilizaba diferentes servicios de análisis, seguimiento y publicidad, como *Google Analytics, Kissmetrics* y *AdRoll*.
 
 ![](images/image5.png)
-
 ![](images/image32.png)
-
 ![](images/image19.png)
-
 ![](images/image30.png)
 
 ## El inicio de algo interesante
@@ -166,7 +161,6 @@ Revisé algunos de los archivos y, noté que el GIF recibido tenía una valoraci
 Aunque el análisis de la comunidad de VirusTotal había señalado un GIF como potencialmente malicioso, esto no basta para concluir que sea malware, por lo que lo tomé solo como un indicador a investigar. Y justo apartir de aqui, vemos que **Brock** estableció una conexión con **hongkonghotels.org**, que resolvía a la dirección IP 184.168.137.1 en el network packet # 2221.
 
 ![](images/image18.png)
-
 ![](images/image23.png)
 
 Al analizar los network packets del # 0 al 2173 con el filtro HTTP, no encontré tráfico claramente malicioso. La actividad parecía corresponder a una navegación normal, con solicitudes desde el equipo de **Brock** hacia diferentes servidores, relacionadas con búsquedas de alojamientos, destinos vacacionales, viajes por carretera y otra información turística. 
@@ -189,7 +183,6 @@ Por lo tanto, la actividad sospechosa comenzó después de la solicitud a Google
 Parece que el archivo malicioso se originó en el sitio web **tilisinga-ismaeliet.starlightsteps.org.** Después de que Brock visitará este sitio, el servidor entregó código HTML que contenía un objeto Flash incrustado, el cual hacía referencia a una versión desactualizada de Flash Player.
 
 ![](images/image33.png)
-
 ![](images/image14.png)
 
 Algo interesante que se puede ver en el network packet # 2355 es que, al profundizar un poco más, aparece otra sección debajo del encabezado **Hypertext Transfer Protocol** llamada "Line-based text data", que contiene 37 líneas de código HTML...
@@ -218,7 +211,6 @@ Además, el payload *(carga maliciosa)* del malware puede realizar diferentes ac
 Varios proveedores de seguridad identificaron el archivo como malicioso, utilizando nombres de detección como *HTML.Exploit.Kit.Q*, *Trojan.Script.Wacatac.B!ml*, *JS.Neutrino.Susp.B* y *HTML/Neutrino.e*.
 
 ![](images/image20.png)
-
 ![](images/image1.png)
 
 ### Answers
