@@ -76,7 +76,7 @@ Antes de pasar a Wireshark, decidí crear un pequeño resumen visual de todas la
 
 ![](images/image31.png)
 
-Procedemos a abrir el archivo PCAP en Wireshark y empezar a poner los filtros siguientes:
+Procedemos a abrir el archivo PCAP en **Wireshark** y empezar a poner los filtros siguientes:
 
 - View **>** Time Display Format
 - Statistics **>** Protocol Hierarchy **>** Hypertext Transfer Protocol **>** Apply as Filter **>** Selected
