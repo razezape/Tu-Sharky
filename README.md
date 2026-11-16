@@ -46,7 +46,7 @@ Recordemos que DNS se encarga de traducir nombres de dominio a direcciones IP y 
 
 - **Priority 3:** La alerta hace referencia a un JA3 Hash, es decir, una huella digital *(fingerprint)* generada mediante el análisis de las características de una conexión TLS. Esta huella se obtiene mediante un hash MD5 y permite identificar y comparar patrones de conexión, de forma similar a cuando extraemos el hash de un archivo para compararlo con bases de datos de malware.
 
-Es importante entender que los fingerprints TLS *(JA3)* permiten identificar cómo un cliente inicia una conexión TLS, mientras que los TLS certificates ayudan a verificar la identidad del servidor.
+Es importante entender que **los fingerprints TLS** *(JA3)* permiten identificar cómo un cliente inicia una conexión TLS, mientras que los **TLS certificates** ayudan a verificar la identidad del servidor.
 
 En este caso, los fingerprints JA3 detectados coinciden con patrones asociados a Malspam *(spam utilizado para distribuir malware)* y RigEK *(explotación de vulnerabilidades)*, lo que podría indicar comunicaciones relacionadas con actividades maliciosas.
 
