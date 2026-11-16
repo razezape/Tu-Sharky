@@ -117,7 +117,7 @@ También noté que, al acceder a **AsiaTravel**, la página cargaba imágenes GI
 
 ![](images/image30.png)
 
-##El inicio de algo interesante
+## El inicio de algo interesante
 
 Según mi análisis, Brock estaba navegando por **Asia Travel**, un sitio web aparentemente seguro, cuando la página estableció una conexión con Kissmetrics, que respondió con una imagen GIF.
 
