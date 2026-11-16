@@ -2,6 +2,15 @@
 
 En esta ocasión aprenderemos cómo analizar un archivo PCAP en Wireshark con filtros y técnicas básicas, así como su proceso de análisis. Se sospecha que la computadora de uno de los empleados, dentro de la red de la compañia, ha sido infectada con algún tipo de malware. Aparentemente este empleado cuyo visito una página web infectada. A primera vista se ven conexiones extrañas, las investigaremos a continuación.
 
+<p align="center">
+  <a href="https://www.wireshark.org/" target="_blank">
+    <img src="https://img.shields.io/badge/Wireshark-1679A7?style=for-the-badge&logo=wireshark&logoColor=white" alt="Wireshark">
+  </a>
+  <a href="https://suricata.io/" target="_blank">
+    <img src="https://img.shields.io/badge/Suricata-EF3B2D?style=for-the-badge&logoColor=white" alt="Suricata">
+  </a>
+</p>
+
 ---
 
 Licencia
