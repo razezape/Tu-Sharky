@@ -85,27 +85,29 @@ Procedemos a abrir el archivo PCAP en **Wireshark**, y aqui algunos de los mejor
 También, podemos hacer lo siguientes:
 
 - Añadir cualquier columna partir de nuestro **Packet Details Panel** _(panel de detalles del paquete)_.
-- - _(click on any column name)_ **>** Column Preferences **>** "Drag, add or move new columns"
+- _(click on any column name)_ **>** Column Preferences **>** "Drag, add or move new columns"
 
 ![](images/image7.png)
 
 ![](images/image11.png)
 
-Hasta aqui, podemos decir que el usuario visitó **msftncsi.com, microsoft.com** y posteriormente **Bing**. También vemos una solicitud a **api.bing.com**, que está procesando una consulta relacionada con el sitio web **Asia Travel** a través del buscador Bing. ¿Quizás el usuario estaba buscando destinos turísticos? Luego, aparece un network packet HTTP/XML que contiene una respuesta de Bing con una sugerencia de búsqueda para **Asia Travel** *(Hong Kong)*. Esto podría estar relacionado con la función de autocompletado o sugerencias de búsqueda de Bing. Hasta aqui, nada raro.
+De acuerdo a lo de arriba, podemos decir que el usuario visitó **msftncsi.com, microsoft.com** y posteriormente **Bing**. También vemos una solicitud a **api.bing.com**, que está procesando una consulta relacionada con el sitio web **Asia Travel** a través del buscador Bing. 
+- ¿Quizás el usuario estaba buscando destinos turísticos?
+Luego, aparece un network packet HTTP/XML que contiene una respuesta de Bing con una sugerencia de búsqueda para **Asia Travel** *(Hong Kong)*. Esto podría estar relacionado con la función de autocompletado o sugerencias de búsqueda de Bing. Hasta aqui, nada raro.
 
 ![](images/image3.png)
 
-Podemos ver algunos archivos **JavaScript** que están siendo enviados a **BROCK-PC.** Confío en que las alertas de Suricata son precisas, por lo que no pude encontrar esta dirección IP de **Asia Travel** entre las alertas generadas. Sin embargo, también exporté los objetos y comparé sus hashes para verificar su integridad.
+En la imagen de abajo, podemos ver algunos archivos **JavaScript** que están siendo enviados a **BROCK-PC.** Confío en que las alertas de Suricata son precisas, por lo que no pude encontrar esta dirección IP de **Asia Travel** entre las alertas generadas. Sin embargo, también exporté los objetos y comparé sus hashes para verificar su integridad.
 
 ![](images/image10.png)
 
 ![](images/image24.png)
 
-Después de observar el tráfico durante un tiempo, podemos ver que el navegador simplemente está cargando la página pieza por pieza, tal como aparece en la pantalla de **BROCK-PC**: animaciones, archivos **CSS**, otros scripts **JavaScript** y recursos de **AsiaTravel.**
+Hasta este punto, todo parece normal. Se observa tráfico relacionado con la carga de recursos del navegador, tal como aparecerían en la pantalla de **BROCK-PC**: animaciones, archivos **CSS**, scripts de **JavaScript** e imágenes de **AsiaTravel**. 
 
 ![](images/image13.png)
 
-También noté que, al acceder a **Asia Travel**, la página web cargaba imágenes GIF durante la sesión de navegación de Brock. **Asia Travel** establecía conexiones con varios servidores de terceros. Esto sugiere que la página carga recursos externos y utiliza diferentes servicios de análisis, seguimiento y publicidad, como *Google Analytics, Kissmetrics* y *AdRoll*.
+También noté que, al acceder a **AsiaTravel**, la página cargaba imágenes GIF durante la sesión de navegación de Brock. Además, **AsiaTravel** establecía conexiones con varios servidores de terceros. Esto sugiere que el sitio web cargaba recursos externos y utilizaba diferentes servicios de análisis, seguimiento y publicidad, como *Google Analytics, Kissmetrics* y *AdRoll*.
 
 ![](images/image5.png)
 
@@ -115,7 +117,8 @@ También noté que, al acceder a **Asia Travel**, la página web cargaba imágen
 
 ![](images/image30.png)
 
-El inicio de algo interesante: Según mi análisis, Brock estaba navegando por **Asia Travel**, un sitio web aparentemente seguro, cuando la página estableció una conexión con Kissmetrics, que respondió con una imagen GIF.
+##El inicio de algo interesante
+Según mi análisis, Brock estaba navegando por **Asia Travel**, un sitio web aparentemente seguro, cuando la página estableció una conexión con Kissmetrics, que respondió con una imagen GIF.
 
 Inicialmente pensé que Brock podría haber hecho clic en ella debido a la actividad de ida y vuelta *(round-trip)*. Esto posteriormente lo llevó a A.AdRoll, que respondió con un archivo JavaScript. A partir de ese momento, la IP 54.243.123.3 comenzó a aparecer en las alertas de Suricata con prioridad 3.
 
