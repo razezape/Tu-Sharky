@@ -155,11 +155,6 @@ Inicialmente pensé que Brock podría haber hecho clic en ella debido a la activ
 
 <p align="center">
   <img src="images/image2.png" width="700">
-</p>
-
-Revisé algunos de los archivos y, noté que el GIF recibido tenía una valoración negativa de la comunidad en VirusTotal_
-
-<p align="center">
   <img src="images/image12.png" width="500">
 </p>
 
