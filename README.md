@@ -166,7 +166,7 @@ Revisé algunos de los archivos y, noté que el GIF recibido tenía una valoraci
 </p>
 
 | Campo | Valor |
-|-------|-------|
+|:-----:|:-----:|
 | **Network Packet #** | 1614 |
 | **Objects** | GIF |
 | **SRC** | 54.225.202.140 |
