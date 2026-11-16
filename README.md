@@ -14,6 +14,8 @@ En esta ocasión, utilicé un archivo PCAP de ejemplo *(not included)* para real
   </a>
 </p>
 
+---
+
 License
 
 Copyright © 2026 Razezape. All Rights Reserved.
