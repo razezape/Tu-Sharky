@@ -127,7 +127,7 @@ Inicialmente pensé que Brock podría haber hecho clic en ella debido a la activ
 
 Revisé algunos de los archivos y, noté que el GIF recibido tenía una valoración negativa de la comunidad en VirusTotal_
 
-<img src="images/image12.png" width="300">
+<img src="images/image12.png" width="500">
 
 | Campo | Valor |
 |-------|-------|
@@ -145,21 +145,19 @@ Revisé algunos de los archivos y, noté que el GIF recibido tenía una valoraci
 | **SRC** | 23.15.4.25 |
 | **DST** | BROCK-PC |
 
-Algunos archivos, como este GIF, pueden recibir una valoración negativa por parte de la comunidad en VirusTotal, pero esto no significa necesariamente que sean malware. Sin embargo, es un indicador que merece investigarse.
-
-Al profundizar en los network packets, finalmente encontré algo interesante: **Brock** estableció una conexión con **hongkonghotels.org**, que resolvía a la dirección IP 184.168.137.1 en el network packet # 2221, como se muestra a continuación.
+Aunque el análisis de la comunidad de VirusTotal había señalado un GIF como potencialmente malicioso, esto no basta para concluir que sea malware, por lo que lo tomé solo como un indicador a investigar. Y justo apartir de aqui, vemos que **Brock** estableció una conexión con **hongkonghotels.org**, que resolvía a la dirección IP 184.168.137.1 en el network packet # 2221.
 
 ![](images/image18.png)
 
 ![](images/image23.png)
 
-Llegado hasta este número de network packet, estas conexiones ya demuestran algo importante, y es que Brock pudo haber estado buscando hoteles en Hong Kong a través de Google Maps y posiblemente hizo clic en la página web de algún hotel que lo llevó a este dominio. Esto podría explicar por qué encontramos solicitudes a Google Maps API con información relacionada con **hongkonghotels.org.**
+Al analizar los network packets del # 0 al 2173 con el filtro HTTP, no encontré tráfico claramente malicioso. La actividad parecía corresponder a una navegación normal, con solicitudes desde el equipo de **Brock** hacia diferentes servidores, relacionadas con búsquedas de alojamientos, destinos vacacionales, viajes por carretera y otra información turística. 
 
-Sin embargo, las alertas de Suricata también identifican la IP de esta API como potencialmente sospechosa con **Priority 3**, seguida de otra alerta relacionada con hongkonghotels.org con Priority 1, asociada a Exploit Kits (EKs) e inyección de JavaScript malicioso.
+El cambio importante aparece en el network packet # 2221, donde **Brock** establece una conexión con **hongkonghotels.org**, que resuelve a la IP **184.168.137.1**. Esto tiene sentido con lo observado antes: Brock pudo haber estado buscando hoteles en Hong Kong a través de Google Maps y posiblemente hizo clic en la página web de algún hotel que lo llevó a este dominio. Esto explicaría por qué encontramos solicitudes a Google Maps API con información relacionada con **hongkonghotels.org**.
 
-Por lo tanto, al analizar los network packets del # 0 al 2173 utilizando el filtro HTTP, no encontré tráfico claramente malicioso. La actividad parecía corresponder a una navegación normal, con solicitudes desde el equipo de Brock hacia diferentes servidores de destino, relacionadas con búsquedas de alojamientos, destinos vacacionales, viajes por carretera y otra información turística.
+Además, las alertas de Suricata respaldan esta sospecha: primero identifican la IP de la API como potencialmente sospechosa con **Priority 3**, seguida de otra alerta relacionada con **hongkonghotels.org** con **Priority 1**, asociada a Exploit Kits (EKs) e inyección de JavaScript malicioso.
 
-Aunque anteriormente el análisis de la comunidad de VirusTotal había señalado un GIF como potencialmente malicioso, considero que la actividad sospechosa podría haber comenzado después de la solicitud a Google Maps API y durante la navegación por el servidor web Hong Kong Hotels. Será necesario continuar investigando los network packets posteriores para determinar qué ocurrió exactamente.
+Por lo tanto, la actividad sospechosa comenzó después de la solicitud a Google Maps API y durante la navegación por el servidor web de **Hong Kong Hotels**, que sería el sitio comprometido visitado antes de que se produjera el tráfico malicioso.
 
 ### Answers
 
@@ -170,23 +168,21 @@ Aunque anteriormente el análisis de la comunidad de VirusTotal había señalado
 
 ## 3. ¿Cuál es la dirección IP y el nombre de dominio desde los que se distribuyó el malware?
 
-¡Encontramos el malware! Y, tal como sospechábamos anteriormente, parece que el archivo malicioso se originó en el sitio web **tilisinga-ismaeliet.starlightsteps.org.** Después de que Brock visitará este sitio, el servidor entregó código HTML que contenía un objeto Flash incrustado, el cual hacía referencia a una versión desactualizada de Flash Player.
+Parece que el archivo malicioso se originó en el sitio web **tilisinga-ismaeliet.starlightsteps.org.** Después de que Brock visitará este sitio, el servidor entregó código HTML que contenía un objeto Flash incrustado, el cual hacía referencia a una versión desactualizada de Flash Player.
 
 ![](images/image33.png)
 
 ![](images/image14.png)
 
-Algo interesante que se puede ver en el network packet # 2355 es que, al profundizar un poco más, aparece otra sección debajo del encabezado Hypertext Transfer Protocol llamada "Line-based text data", que contiene 37 líneas de código HTML.
+Algo interesante que se puede ver en el network packet # 2355 es que, al profundizar un poco más, aparece otra sección debajo del encabezado **Hypertext Transfer Protocol** llamada "Line-based text data", que contiene 37 líneas de código HTML...
 
 ![](images/image4.png)
 
-Una de las primeras líneas muestra **DOCTYPE HTML PUBLIC** y hace referencia a una URL de www.w3.org. Esto no indica la presencia de malware, sino que es una referencia a un estándar web llamado HTML 4.01 Transitional. Simplemente forma parte de la estructura del documento HTML.
+Una de las primeras líneas muestra **DOCTYPE HTML PUBLIC** y hace referencia a [www.w3.org](https://www.w3.org). Esto no indica malware, solo es el estándar web HTML 4.01 Transitional. 
 
-Sin embargo, el resto del código es más interesante, ya que contiene un objeto Flash incrustado, hace referencia a un archivo externo SWF e incluye instrucciones para que el navegador lo cargue.
+El resto del código es más interesante: contiene un objeto Flash incrustado que hace referencia a un archivo externo **SWF** y le indica al navegador que lo cargue. Aquí empieza lo sospechoso. **VirusTotal** identificó el SWF como malicioso, lo que coincide con la alerta de Suricata *Outdated Adobe Flash – Priority 1*.
 
-Aquí es donde empieza lo sospechoso. El archivo SWF fue identificado como malicioso por VirusTotal, lo que coincide con la alerta de Suricata Outdated Adobe Flash – Priority 1, que señala el uso de una versión desactualizada de Flash Player.
-
-Esto podría haber sido el punto inicial de la infección en la computadora de Brock, provocando posteriormente otras conexiones a sitios web como **hongkonghotels.org**, donde también encontramos alertas Priority 1 relacionadas con Exploit Kits (EKs) e inyección de JavaScript malicioso.
+Este pudo ser el punto inicial de la infección en la computadora de Brock, y de ahí las conexiones posteriores a sitios como **hongkonghotels.org**, que también tiene alertas Priority 1 de **Exploit Kits (EKs)** e inyección de JavaScript malicioso.
 
 ### Answers
 
@@ -227,37 +223,48 @@ A partir de ese punto, comencé a listar otros posibles hosts maliciosos de cada
 
 ### Answers
 
-- **Hostname/URL:** Hong Kong Hotels
-- **IP Address:** 184.168.137.1
-- **Role:** Even though their .js seems to be okay, somehow it is still a EKs and JS Injection compromised website.
-- **Communication protocol or service:** HTTP, TCP
-- **Date and time of the interactions:** BROCK → WEBSITE *(20:21:36)* to END *(20:21:43)* in 2016
+| Campo | Valor |
+|-------|-------|
+| **Hostname/URL** | Hong Kong Hotels |
+| **IP Address** | 184.168.137.1 |
+| **Role** | Even though their .js seems to be okay, somehow it is still a EKs and JS Injection compromised website. |
+| **Communication protocol or service** | HTTP, TCP |
+| **Date and time of the interactions** | BROCK → WEBSITE *(20:21:36)* to END *(20:21:43)* in 2016 |
 
 <br>
 
-- **Hostname/URL:** Starlight Steps Org UK
-- **IP Address:** 5.135.252.130
-- **Role:** Delivered the malware in html markup language
-- **Communication protocol or service:** HTTP, TCP
-- **Date and time of the interactions:** WEBSITE → BROCK *(20:21:37)* to END *(20:22:49)* in 2016
+| Campo | Valor |
+|-------|-------|
+| **Hostname/URL** | Starlight Steps Org UK |
+| **IP Address** | 5.135.252.130 |
+| **Role** | Delivered the malware in html markup language |
+| **Communication protocol or service** | HTTP, TCP |
+| **Date and time of the interactions** | WEBSITE → BROCK *(20:21:37)* to END *(20:22:49)* in 2016 |
 
 <br>
 
-- **Hostname/URL:** BROK'S GATEWAY ROUTER
-- **IP Address:** 172.16.174.1
-- **Role:** Brock's default gateway, responsible for access to internet, traffic related to [onion.to](http://onion.to), a Tor proxy service used to anonymize and encrypt internet traffic
-- **Communication protocol or service:** DNS
-- **Date and time of the interactions:** ROUTER → BROCK PC *(20:22:35)* in 2016
+| Campo | Valor |
+|-------|-------|
+| **Hostname/URL** | BROK'S GATEWAY ROUTER |
+| **IP Address** | 172.16.174.1 |
+| **Role** | Brock's default gateway, responsible for access to internet, traffic related to [onion.to](http://onion.to), a Tor proxy service used to anonymize and encrypt internet traffic |
+| **Communication protocol or service** | DNS |
+| **Date and time of the interactions** | ROUTER → BROCK PC *(20:22:35)* in 2016 |
 
 <br>
 
-- **Hostname/URL:** ONION.TO
-- **IP Address:** 217.197.83.197
-- **Role:** The external server 217.197.83.197 communicated with Brock's infected PC. An HTTP object associated with an .onion.to hostname was identified, potentially indicating an attempt to access a Tor-related service.
-- **Communication protocol or service:** TCP, HTTP and TLSv1.2
-- **Date and time of the interactions:** PROXY SERVICE → BROCK PC *(20:22:35)* to END *(20:22:52)* in 2016
+| Campo | Valor |
+|-------|-------|
+| **Hostname/URL** | ONION.TO |
+| **IP Address** | 217.197.83.197 |
+| **Role** | The external server 217.197.83.197 communicated with Brock's infected PC. An HTTP object associated with an .onion.to hostname was identified, potentially indicating an attempt to access a Tor-related service. |
+| **Communication protocol or service** | TCP, HTTP and TLSv1.2 |
+| **Date and time of the interactions** | PROXY SERVICE → BROCK PC *(20:22:35)* to END *(20:22:52)* in 2016 |
 
-Al parecer, inicialmente pasé por alto dos hosts relacionados con la actividad de un ransomware. El primero, 85.14.243.9, corresponde al Ransomware Callback Server\* un servidor utilizado por el malware para comunicarse con sus operadores. Y el segundo, 217.197.83.197, corresponde al Ransomware Payment Server, alojado en la red Tor (.onion), que permite a los atacantes mantener una página de pago del rescate de forma anónima, dificultando la identificación de su ubicación.
+Al parecer, inicialmente pasé por alto dos hosts relacionados con actividad de **ransomware**:
+
+- **85.14.243.9:** *Ransomware Callback Server*, usado por el malware para comunicarse con sus operadores.
+- **217.197.83.197:** *Ransomware Payment Server*, alojado en la red Tor (`.onion`), que permite a los atacantes mantener la página de pago del rescate de forma anónima y dificulta ubicarlos.
 
 ---
 
