@@ -182,7 +182,7 @@ Por lo tanto, la actividad sospechosa comenzó después de la solicitud a Google
 
 Parece que el archivo malicioso se originó en el sitio web **tilisinga-ismaeliet.starlightsteps.org.** Después de que Brock visitará este sitio, el servidor entregó código HTML que contenía un objeto Flash incrustado, el cual hacía referencia a una versión desactualizada de Flash Player.
 
-![](images/image33.png)
+![](images/image33.png)<br>
 ![](images/image14.png)
 
 Algo interesante que se puede ver en el network packet # 2355 es que, al profundizar un poco más, aparece otra sección debajo del encabezado **Hypertext Transfer Protocol** llamada "Line-based text data", que contiene 37 líneas de código HTML...
