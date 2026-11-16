@@ -125,21 +125,25 @@ Inicialmente pensé que Brock podría haber hecho clic en ella debido a la activ
 
 ![](images/image2.png)
 
-Revisé algunos de los archivos y, nuevamente, noté que el GIF recibido tenía una valoración negativa de la comunidad en VirusTotal, como podemos ver a continuación.
+Revisé algunos de los archivos y, noté que el GIF recibido tenía una valoración negativa de la comunidad en VirusTotal_
 
 ![](images/image12.png)
 
-**Network Packet #:** 1614
-**Objects:** GIF
-**SRC:** 54.225.202.140
-**DST:** BROCK-PC
+| Campo | Valor |
+|-------|-------|
+| **Network Packet #** | 1614 |
+| **Objects** | GIF |
+| **SRC** | 54.225.202.140 |
+| **DST** | BROCK-PC |
 
 ![](images/image21.png)
 
-**Network Packet #:** 1709
-**Objects:** GIF
-**SRC:** 23.15.4.25
-**DST:** BROCK-PC
+| Campo | Valor |
+|-------|-------|
+| **Network Packet #** | 1709 |
+| **Objects** | GIF |
+| **SRC** | 23.15.4.25 |
+| **DST** | BROCK-PC |
 
 Algunos archivos, como este GIF, pueden recibir una valoración negativa por parte de la comunidad en VirusTotal, pero esto no significa necesariamente que sean malware. Sin embargo, es un indicador que merece investigarse.
 
