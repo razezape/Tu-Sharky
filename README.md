@@ -315,7 +315,6 @@ Al parecer, inicialmente pasé por alto dos hosts relacionados con actividad de 
 | **Date and time of the interactions** | WEBSITE → BROCK *(20:21:37)* to END *(20:22:49)* in 2016 |
 
 </div>
----
 
 ## 6. Graphic sketch and explain of the attack scenario
 
