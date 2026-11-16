@@ -307,7 +307,7 @@ Al parecer, inicialmente pasé por alto dos hosts relacionados con actividad de 
 | **Date and time of the interactions** | PROXY SERVICE → BROCK PC *(20:22:35)* to END *(20:22:52)* in 2016 |
 
 | Campo | Valor |
-|:-----:|:-----:|
+|-----|-----|
 | **Hostname/URL** | Starlight Steps Org UK |
 | **IP Address** | 5.135.252.130 |
 | **Role** | Delivered the malware in html markup language |
