@@ -4,13 +4,13 @@ En esta ocasión, utilizaremos un archivo PCAP de ejemplo para realizar un anál
   
 <p align="center">
   <a href="https://www.wireshark.org/" target="_blank">
-    <img src="https://img.shields.io/badge/Wireshark-1679A7?style=for-the-badge&logo=wireshark&logoColor=white" alt="Wireshark">
+    <img src="https://img.shields.io/badge/-Wireshark-S?style=for-the-badge&logo=wireshark&labelColor=%23000000&color=%230082FC" alt="Wireshark">
   </a>
   <a href="https://suricata.io/" target="_blank">
-    <img src="https://img.shields.io/badge/Suricata-EF3B2D?style=for-the-badge&logoColor=white" alt="Suricata">
+    <img src="https://img.shields.io/badge/-Suricata-S?style=for-the-badge&labelColor=%23000000&color=%230082FC" alt="Suricata">
   </a>
   <a href="https://www.netresec.com/?page=NetworkMiner" target="_blank">
-    <img src="https://img.shields.io/badge/NetworkMiner-0A66C2?style=for-the-badge&logoColor=white" alt="NetworkMiner">
+    <img src="https://img.shields.io/badge/-NetworkMiner-S?style=for-the-badge&labelColor=%23000000&color=%230082FC" alt="NetworkMiner">
   </a>
 </p>
 
