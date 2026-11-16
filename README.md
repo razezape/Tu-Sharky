@@ -7,10 +7,10 @@ En esta ocasión, utilizaremos un archivo PCAP de ejemplo para realizar un anál
     <img src="https://img.shields.io/badge/-Wireshark-S?style=for-the-badge&logo=wireshark&labelColor=%23000000&color=%230082FC" alt="Wireshark">
   </a>
   <a href="https://suricata.io/" target="_blank">
-    <img src="https://img.shields.io/badge/-Suricata-S?style=for-the-badge&labelColor=%23000000&color=%230082FC" alt="Suricata">
+    <img src="https://img.shields.io/badge/-Suricata-S?style=for-the-badge&logo=gnometerminal&labelColor=%23000000&color=%23F97316" alt="Suricata">
   </a>
   <a href="https://www.netresec.com/?page=NetworkMiner" target="_blank">
-    <img src="https://img.shields.io/badge/-NetworkMiner-S?style=for-the-badge&labelColor=%23000000&color=%230082FC" alt="NetworkMiner">
+    <img src="https://img.shields.io/badge/-NetworkMiner-S?style=for-the-badge&logo=linux&labelColor=%23000000&color=%238B5CF6" alt="NetworkMiner">
   </a>
 </p>
 
