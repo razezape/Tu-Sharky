@@ -86,9 +86,7 @@ Procedemos a abrir el archivo PCAP en **Wireshark** y empezar a poner los filtro
 
 ![](images/image11.png)
 
-Al comparar nuestros hallazgos con las alertas de Suricata, parece que el usuario visitó **msftncsi.com, microsoft.com** y posteriormente **Bing**. Hasta el momento, no se observa nada sospechoso.
-
-También vemos una solicitud a **api.bing.com**, que está procesando una consulta relacionada con el sitio web **Asia Travel** a través del buscador Bing. ¿Quizás el usuario estaba buscando destinos turísticos? Luego, aparece un network packet HTTP/XML que contiene una respuesta de Bing con una sugerencia de búsqueda para **Asia Travel** *(Hong Kong)*. Esto podría estar relacionado con la función de autocompletado o sugerencias de búsqueda de Bing.
+Hasta aqui, podemos decir que el usuario visitó **msftncsi.com, microsoft.com** y posteriormente **Bing**. También vemos una solicitud a **api.bing.com**, que está procesando una consulta relacionada con el sitio web **Asia Travel** a través del buscador Bing. ¿Quizás el usuario estaba buscando destinos turísticos? Luego, aparece un network packet HTTP/XML que contiene una respuesta de Bing con una sugerencia de búsqueda para **Asia Travel** *(Hong Kong)*. Esto podría estar relacionado con la función de autocompletado o sugerencias de búsqueda de Bing. Hasta aqui, nada raro.
 
 ![](images/image3.png)
 
