@@ -90,7 +90,9 @@ Una vez generadas las alertas, decidí utilizar otra herramienta: NetworkMiner, 
 
 Antes de pasar a Wireshark, decidí crear un pequeño resumen visual de todas las alertas generadas por Suricata, organizándose por prioridad y destacando las direcciones IP más relevantes. Esto facilita la identificación del tráfico sospechoso y permite seguir un proceso de análisis más estructurado en Wireshark.
 
-![](images/image31.png)
+<p align="center">
+  <img src="images/image31.png" width="300">
+</p>
 
 Procedemos a abrir el archivo PCAP en **Wireshark**, y aqui algunos de los mejores metodos/filtros para empezar con tu analisis:
 
