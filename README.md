@@ -37,8 +37,8 @@ Primero, utilizamos **Suricata** para generar alertas mediante reglas de detecci
 Seguidamente, corremos el comando con la ruta del archivo **suricata.yaml**, que contiene la configuración principal de interfaz de red y reglas de detección de Suricata, como el snort.conf en snort.
 
 <p align="center">
-  <img src="images/image9.png" width="700">
-  <img src="images/image8.png" width="700">
+  <img src="images/image9.png" width="800">
+  <img src="images/image8.png" width="900">
 </p>
 
 Veremos que se generaron varios archivos, pero nos enfocaremos en **fast.log.** Aquí las alertas de Suricata, están clasificadas en tres niveles de prioridad, donde priority 1 representa el nivel más alto de gravedad.
