@@ -3,13 +3,13 @@
 En esta ocasión, utilizaremos un archivo PCAP de ejemplo para realizar un análisis con fines educativos. Se sospecha que la computadora de uno de los empleados de la compañía ha sido infectada con algún tipo de malware. Aparentemente, el empleado visitó una página web infectada. A primera vista, se observan algunas conexiones sospechosas que investigaremos a continuación.  
   
 <p align="center">
-  <a href="https://www.wireshark.org/" target="_blank">
+  <a>
     <img src="https://img.shields.io/badge/-Wireshark-S?style=for-the-badge&logo=wireshark&labelColor=%23000000&color=%230082FC" alt="Wireshark">
   </a>
-  <a href="https://suricata.io/" target="_blank">
+  <a>
     <img src="https://img.shields.io/badge/-Suricata-S?style=for-the-badge&logo=gnometerminal&labelColor=%23000000&color=%23F97316" alt="Suricata">
   </a>
-  <a href="https://www.netresec.com/?page=NetworkMiner" target="_blank">
+  <a>
     <img src="https://img.shields.io/badge/-NetworkMiner-S?style=for-the-badge&logo=linux&labelColor=%23000000&color=%238B5CF6" alt="NetworkMiner">
   </a>
 </p>
