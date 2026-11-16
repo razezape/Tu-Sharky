@@ -81,6 +81,7 @@ Procedemos a abrir el archivo PCAP en **Wireshark** y empezar a poner los filtro
 - View **>** Time Display Format
 - Statistics **>** Protocol Hierarchy **>** Hypertext Transfer Protocol **>** Apply as Filter **>** Selected
 - (click on any column name) **>** Column Preferences **>** "Drag, add or move new columns"
+- Files **>** Export Objects **>** HTTP (para hash calculations)
 
 ![](images/image7.png)
 
