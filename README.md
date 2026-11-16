@@ -190,7 +190,7 @@ Revisé algunos de los archivos y, noté que el GIF recibido tenía una valoraci
 Aunque el análisis de la comunidad de VirusTotal había señalado un GIF como potencialmente malicioso, esto no basta para concluir que sea malware, por lo que lo tomé solo como un indicador a investigar. Y justo apartir de aqui, vemos que **Brock** estableció una conexión con **hongkonghotels.org**, que resolvía a la dirección IP 184.168.137.1 en el network packet # 2221.
 
 <p align="center">
-  <img src="images/image18.png" width="700">
+  <img src="images/image18.png" width="1000">
   <img src="images/image23.png" width="700">
 </p>
 
@@ -212,7 +212,7 @@ Por lo tanto, la actividad sospechosa comenzó después de la solicitud a Google
 Parece que el archivo malicioso se originó en el sitio web **tilisinga-ismaeliet.starlightsteps.org.** Después de que Brock visitará este sitio, el servidor entregó código HTML que contenía un objeto Flash incrustado, el cual hacía referencia a una versión desactualizada de Flash Player.
 
 <p align="center">
-  <img src="images/image33.png" width="700"><br>
+  <img src="images/image33.png" width="700">
   <img src="images/image14.png" width="1000">
 </p>
 
