@@ -1,6 +1,6 @@
 # Análisis de PCAP: Host infectado con malware
 
-En esta ocasión aprenderemos cómo analizar un archivo PCAP en Wireshark con filtros y técnicas básicas, así como su proceso de análisis. Se sospecha que la computadora de uno de los empleados, dentro de la red de la compañia, ha sido infectada con algún tipo de malware. Aparentemente este empleado cuyo visito una página web infectada. A primera vista se ven conexiones extrañas, las investigaremos.
+En esta ocasión aprenderemos cómo analizar un archivo PCAP en Wireshark con filtros y técnicas básicas, así como su proceso de análisis. Se sospecha que la computadora de uno de los empleados, dentro de la red de la compañia, ha sido infectada con algún tipo de malware. Aparentemente este empleado cuyo visito una página web infectada. A primera vista se ven conexiones extrañas, las investigaremos a continuación.
 
 ---
 
@@ -28,7 +28,7 @@ Veremos que se generaron varios archivos, pero nos enfocaremos en **fast.log.** 
 
 ![](images/image22.png)
 
-- **Priority 1:** La primera alerta indica que se detectó tráfico sospechoso proveniente de la IP 184.168.137.180, asociado al uso de un Exploit Kit *(EK)*, dirigido al host potencialmente infectado 172.16.174.93. La comunicación se realizó a través del puerto 80 *(HTTP)* del origen y el puerto temporal 49238 del host infectado, utilizado para recibir el tráfico.
+- **Priority 1:** La primera alerta indica que se detectó tráfico sospechoso proveniente de la IP 184.168.137.180, asociado al uso de un *Exploit Kit* _(EK)_, dirigido al host potencialmente infectado 172.16.174.93. La comunicación se realizó a través del puerto 80 *(HTTP)* del origen y el puerto temporal 49238 del host infectado, utilizado para recibir el tráfico.
 
 - **Priority 1:** La segunda alerta indica una posible inyección de una librería JavaScript maliciosa desde el mismo host externo hacia nuestro host interno, clasificada como un Network Trojan. Suricata detecta esta actividad maliciosa, inspeccionando el contenido HTTP y comparando patrones sospechosos con sus reglas de detección.
 
@@ -80,8 +80,8 @@ Procedemos a abrir el archivo PCAP en **Wireshark** y empezar a poner los filtro
 
 - View **>** Time Display Format
 - Statistics **>** Protocol Hierarchy **>** Hypertext Transfer Protocol **>** Apply as Filter **>** Selected
-- (click on any column name) **>** Column Preferences **>** "Drag, add or move new columns"
-- Files **>** Export Objects **>** HTTP (para hash calculations)
+- _(click on any column name)_ **>** Column Preferences **>** "Drag, add or move new columns"
+- Files **>** Export Objects **>** HTTP _(para hash calculations)_
 
 ![](images/image7.png)
 
